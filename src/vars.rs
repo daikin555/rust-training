@@ -56,4 +56,18 @@ pub fn run() {
     // 値が0での配列を10個作る
     let a2 = [0; 10];
     println!("{:?} {:?} {} {}", a1, a2, a1[2], a1[3]);
+
+    let s1 = "helloこんにちは挨拶"; //26bytes
+    let s2 = "hello";
+    println!("Stack address of s1 is: {:p}", &s1);
+    println!("Stack address of s2 is: {:p}", &s2);
+    println!("Static mamory address of s1 is: {:?}", s1.as_ptr());
+    println!("Static mamory address of s2 is: {:?}", s2.as_ptr());
+    println!("Len of s1 is: {}", s1.len());
+    println!("Len of s2 is: {}", s2.len());
+
+    let mut s1 = String::from("hello");
+    let mut s2 = String::from("helloworld");
+    println!("Stack address of s1 is: {:p}", &s1);
+    println!("Stack address of s2 is: {:p}", &s2);
 }
